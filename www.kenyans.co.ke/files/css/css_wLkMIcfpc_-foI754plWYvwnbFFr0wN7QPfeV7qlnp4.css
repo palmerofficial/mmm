@@ -1,0 +1,311 @@
+.system-status-counter__status-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle
+}
+
+.system-status-counter__status-icon:before {
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center 2px;
+    background-size: 20px
+}
+
+.system-status-counter__status-icon--error:before {
+    background-image: url(/core/themes/stable/css/system/components/../../../images/core/icons/e32700/error.svg)
+}
+
+.system-status-counter__status-icon--warning:before {
+    background-image: url(/core/themes/stable/css/system/components/../../../images/core/icons/e29700/warning.svg)
+}
+
+.system-status-counter__status-icon--checked:before {
+    background-image: url(/core/themes/stable/css/system/components/../../../images/core/icons/73b355/check.svg)
+}
+
+.system-status-report-counters__item {
+    width: 100%;
+    margin-bottom: .5em;
+    padding: .5em 0;
+    text-align: center;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, .063)
+}
+
+@media screen and (min-width:60em) {
+    .system-status-report-counters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
+    .system-status-report-counters__item--half-width {
+        width: 49%
+    }
+    .system-status-report-counters__item--third-width {
+        width: 33%
+    }
+}
+
+.system-status-general-info__item {
+    margin-top: 1em;
+    padding: 0 1em 1em;
+    border: 1px solid #ccc
+}
+
+.system-status-general-info__item-title {
+    border-bottom: 1px solid #ccc
+}
+
+body.drag {
+    cursor: move
+}
+
+tr.region-title {
+    font-weight: 700
+}
+
+tr.region-message {
+    color: #999
+}
+
+tr.region-populated {
+    display: none
+}
+
+tr.add-new .tabledrag-changed {
+    display: none
+}
+
+.draggable a.tabledrag-handle {
+    float: left;
+    overflow: hidden;
+    height: 1.7em;
+    margin-left: -1em;
+    cursor: move;
+    text-decoration: none
+}
+
+[dir=rtl] .draggable a.tabledrag-handle {
+    float: right;
+    margin-right: -1em;
+    margin-left: 0
+}
+
+a.tabledrag-handle:hover {
+    text-decoration: none
+}
+
+a.tabledrag-handle .handle {
+    width: 14px;
+    height: 14px;
+    margin: -.4em .5em 0;
+    padding: .42em .5em;
+    background: url(/core/themes/stable/css/system/components/../../../images/core/icons/787878/move.svg) no-repeat 6px 7px
+}
+
+a.tabledrag-handle:hover .handle,
+a.tabledrag-handle:focus .handle {
+    background-image: url(/core/themes/stable/css/system/components/../../../images/core/icons/000000/move.svg)
+}
+
+.touchevents .draggable td {
+    padding: 0 10px
+}
+
+.touchevents .draggable .menu-item__link {
+    display: inline-block;
+    padding: 10px 0
+}
+
+.touchevents a.tabledrag-handle {
+    width: 40px;
+    height: 44px
+}
+
+.touchevents a.tabledrag-handle .handle {
+    height: 21px;
+    background-position: 40% 19px
+}
+
+[dir=rtl] .touch a.tabledrag-handle .handle {
+    background-position: right 40% top 19px
+}
+
+.touchevents .draggable.drag a.tabledrag-handle .handle {
+    background-position: 50% -32px
+}
+
+.tabledrag-toggle-weight-wrapper {
+    text-align: right
+}
+
+[dir=rtl] .tabledrag-toggle-weight-wrapper {
+    text-align: left
+}
+
+.indentation {
+    float: left;
+    width: 20px;
+    height: 1.7em;
+    margin: -.4em .2em -.4em -.4em;
+    padding: .42em 0 .42em .6em
+}
+
+[dir=rtl] .indentation {
+    float: right;
+    margin: -.4em -.4em -.4em .2em;
+    padding: .42em .6em .42em 0
+}
+
+.tablesort {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 100%
+}
+
+.tablesort--asc {
+    background-image: url(/core/themes/stable/css/system/components/../../../images/core/icons/787878/twistie-down.svg)
+}
+
+.tablesort--desc {
+    background-image: url(/core/themes/stable/css/system/components/../../../images/core/icons/787878/twistie-up.svg)
+}
+
+div.tree-child {
+    background: url(/core/themes/stable/css/system/components/../../../images/core/tree.png) no-repeat 11px center
+}
+
+div.tree-child-last {
+    background: url(/core/themes/stable/css/system/components/../../../images/core/tree-bottom.png) no-repeat 11px center
+}
+
+[dir=rtl] div.tree-child,
+[dir=rtl] div.tree-child-last {
+    background-position: -65px center
+}
+
+div.tree-child-horizontal {
+    background: url(/core/themes/stable/css/system/components/../../../images/core/tree.png) no-repeat -11px center
+}
+
+.views-align-left {
+    text-align: left
+}
+
+.views-align-right {
+    text-align: right
+}
+
+.views-align-center {
+    text-align: center
+}
+
+.views-view-grid .views-col {
+    float: left
+}
+
+.views-view-grid .views-row {
+    float: left;
+    clear: both;
+    width: 100%
+}
+
+.views-display-link+.views-display-link {
+    margin-left: .5em
+}
+
+.blazy,
+.blazy *,
+.blazy *:before,
+.blazy *:after {
+    box-sizing: border-box
+}
+
+.b-lazy,
+.b-responsive {
+    display: block;
+    height: auto;
+    min-height: 1px;
+    opacity: 0;
+    transition: opacity .5s ease-in
+}
+
+.b-loaded,
+.b-error,
+.b-bg.media--loading,
+.b-bg.is-b-loading {
+    opacity: 1
+}
+
+.b-bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block
+}
+
+.litebox,
+.blazy iframe,
+.media iframe {
+    border: 0;
+    display: block;
+    max-width: 100%
+}
+
+.media-wrapper--inline {
+    max-width: 100%
+}
+
+.blazy .media {
+    display: block;
+    position: relative
+}
+
+.media--fx {
+    overflow: hidden;
+    position: relative
+}
+
+.media--fx img {
+    color: transparent;
+    display: block;
+    opacity: 1;
+    width: 100%
+}
+
+.media--ratio .media__element,
+.media--fx .b-blur {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    min-height: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    object-fit: cover
+}
+
+.media--fx .b-blur {
+    color: transparent;
+    filter: blur(3px);
+    opacity: .9;
+    transition: opacity 1.2s
+}
+
+.media--fx-lg .b-blur {
+    filter: blur(6px);
+    opacity: .8
+}
+
+.animated img {
+    opacity: 1
+}
+
+.field[data-blazy] {
+    min-width: 50%
+}

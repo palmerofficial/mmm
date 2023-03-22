@@ -1,0 +1,198 @@
+@-webkit-keyframes rotateplane {
+    0% {
+        -webkit-transform: perspective(120px);
+        transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg);
+        transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+        transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+    }
+}
+
+.media--loading,
+.is-b-loading {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    min-height: 30px
+}
+
+.media--loading:not([data-animation]):before,
+.is-b-loading:not([data-animation]):before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    background: #2eaae0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    font-size: 0;
+    z-index: 22;
+    -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+    animation: rotateplane 1.2s infinite ease-in-out
+}
+
+.media--loading>span+.b-lazy,
+.media--loading>span+picture,
+.media--loading>span+a,
+.media--loading.media--player>span~.b-lazy,
+.is-b-loading>span+.b-lazy,
+.is-b-loading>span+picture,
+.is-b-loading>span+a,
+.is-b-loading.media--player>span~.b-lazy {
+    display: none
+}
+
+.caption {
+    display: table
+}
+
+.caption>* {
+    display: block;
+    max-width: 100%
+}
+
+.caption>figcaption {
+    display: table-caption;
+    max-width: none;
+    caption-side: bottom
+}
+
+.caption>figcaption[contenteditable=true]:empty:before {
+    content: attr(data-placeholder);
+    font-style: italic
+}
+
+.caption .media .field,
+.caption .media .field * {
+    float: none;
+    margin: unset
+}
+
+figure.caption-drupal-media.align-center {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.addtoany {
+    display: inline
+}
+
+.addtoany_list {
+    display: inline;
+    line-height: 16px
+}
+
+.addtoany_list>a,
+.addtoany_list a img,
+.addtoany_list a>span {
+    vertical-align: middle
+}
+
+.addtoany_list>a {
+    border: 0;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 4px
+}
+
+.addtoany_list.a2a_kit_size_32>a {
+    font-size: 32px
+}
+
+.addtoany_list .a2a_counter img {
+    float: left
+}
+
+.addtoany_list a span.a2a_img {
+    display: inline-block;
+    height: 16px;
+    opacity: 1;
+    overflow: hidden;
+    width: 16px
+}
+
+.addtoany_list a span {
+    display: inline-block;
+    float: none
+}
+
+.addtoany_list.a2a_kit_size_32 a>span {
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    opacity: 1;
+    width: 32px
+}
+
+.addtoany_list a:hover:hover img,
+.addtoany_list a:hover span {
+    opacity: .7
+}
+
+.addtoany_list a.addtoany_share_save img {
+    border: 0;
+    width: auto;
+    height: auto
+}
+
+.addtoany_list a .a2a_count {
+    position: relative
+}
+
+svg.ext {
+    width: 14px;
+    height: 14px;
+    padding-right: .2em;
+    fill: #727272;
+    font-weight: 900
+}
+
+svg.mailto {
+    width: 14px;
+    height: 14px;
+    padding-right: .2em;
+    fill: #727272
+}
+
+svg.ext path,
+svg.mailto path {
+    stroke: #727272;
+    stroke-width: 3
+}
+
+@media print {
+    svg.ext,
+    svg.mailto {
+        display: none;
+        padding: 0
+    }
+}
+
+extlink i {
+    padding-left: .2em
+}
+
+.layout--onecol .layout__region {
+    width: 100%
+}
